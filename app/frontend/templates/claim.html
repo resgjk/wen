@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block main %}
+  {% if all_tweets_is_subscribe %}
+    <div>
+      <div class="smiley" style="left: 10%; top: -100px; font-size: 55px;">🥳</div>
+      <div class="smiley" style="left: 25%; top: 180px; font-size: 40px;">🥳</div>
+      <div class="smiley" style="left: 40%; top: 100px; font-size: 45px;">🥳</div>
+      <div class="smiley" style="left: 60%; top: -40px; font-size: 55px;">🥳</div>
+      <div class="smiley" style="left: 75%; top: 200px; font-size: 60px;">🥳</div>
+      <div  class="smiley" style="left: 90%; top: -80px; font-size: 50px;">🥳</div>
+    </div>
+    <script src="{{ url_for('static', path='/js/smile.js') }}"></script>
+    <p class="average_lable">$WEN AIRDROP</p>
+    <div class="big_label">
+      <p>CHECK YOUR ELIGIBILITY<br>FOR $WEN AIRDROP</p>
+    </div>
+    <div class="main_card">
+      <p class="big_label" style="margin-top: 40px;">YOU GOT 423, 325 $WEN</p>
+      <div>
+          <div>
+              <button type="button" class="button_card_main" style="margin-top: 10px; margin-bottom: 0px;">Share it on X</button>
+          </div>
+          <div>
+              <button type="button" class="button_card_main" style="margin-top: 10px; margin-bottom: 30px;">Refer a friend</button>
+          </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}

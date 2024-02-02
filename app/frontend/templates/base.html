@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', path='/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+  <link rel="icon" href="{{ url_for('static', path='/favicon/favicon.ico') }}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ url_for('static', path='/favicon/favicon.ico') }}" type="image/x-icon">
+  <script src="{{ url_for('static', path='/js/forms.js') }}"></script>
+  <script src="{{ url_for('static', path='/js/click.js') }}"></script>
+  <title>{{ title }}</title>
+</head>
+<body>
+  <header class="container-fluid">
+    <span>
+      <span>
+        <a href="/">
+          <img src="{{ url_for('static', path='/img/brand.jpg') }}" class="nav_image align-middle" width="55" height="55" alt="LOGO" loading="lazy">
+        </a>
+        {% if choise == "airdrop" %}
+          <a href="/airdrop" class="nav_link_choise align-middle">AIRDROP</a>
+          <a href="/farm" class="nav_link align-middle">FARM</a>
+        {% else %}
+          <a href="/airdrop" class="nav_link align-middle">AIRDROP</a>
+          <a href="/farm" class="nav_link_choise align-middle">FARM</a>
+        {% endif %}
+      </span>
+      <div class="social_and_wallet_links align-middle">
+        <div class="social_links align-middle">
+          <a href="#" style="margin-right: 15px;">
+            <img src="{{ url_for('static', path='/img/x.png') }}" class="align-middle" width="30" height="30" loading="lazy">
+          </a>
+          <a href="">
+            <img src="{{ url_for('static', path='/img/tg.png') }}" class="align-middle" width="30" height="30" loading="lazy">
+          </a>
+        </div>
+        <button type="button" onclick="openConnectWalletWindow()" class="connect_wallet_button_header align-middle">Connect Wallet</button>
+      </div>
+    </span>
+  </header>
+  <div id="connectWalletWindow" class="modal">
+    <div class="modal-content">
+      <button type="button" class="closeConnectWalletWindowBtn" onclick="closeConnectWalletWindow()">X</button>
+      <p class="average_lable" style="font-size: 25px; margin-left: 15px; text-align: left;">Enter your wallet address:</p>
+      <input type="text" placeholder="Wallet address" class="wallet_address_input" id="wallet_address_input">
+      <button type="button" class="connect_wallet_form_button" id="connect_wallet_form_button">Connect wallet</button>
+    </div>
+  </div>
+  <main class="container-fluid">
+    <div class="marquee1">
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+    </div>
+    <div class="marquee2">
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+    </div>
+    <div class="marquee3">
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+      <div id="run_row_element" class="run_row_element">wen&nbsp;drop&nbsp;ser</div>
+    </div>
+    {% block main %}
+    {% endblock %}
+  </main>
+  <footer>
+    <div class="footer_label align-middle">Wen Drop Ser</div>
+    <div class="footer_social_links">
+      <a href="#" style="margin-right: 15px;">
+        <img src="{{ url_for('static', path='/img/x.png') }}" class="align-middle" width="30" height="30" loading="lazy">
+      </a>
+      <a href="">
+        <img src="{{ url_for('static', path='/img/tg.png') }}" class="align-middle" width="30" height="30" loading="lazy">
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

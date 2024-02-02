@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block main %}
+  <div>
+    <div class="smiley" style="left: 10%; top: -100px; font-size: 55px;">👨‍🌾</div>
+    <div class="smiley" style="left: 25%; top: 180px; font-size: 40px;">👨‍🌾</div>
+    <div class="smiley" style="left: 40%; top: 100px; font-size: 45px;">👨‍🌾</div>
+    <div class="smiley" style="left: 60%; top: -40px; font-size: 55px;">👨‍🌾</div>
+    <div class="smiley" style="left: 75%; top: 200px; font-size: 60px;">👨‍🌾</div>
+    <div  class="smiley" style="left: 90%; top: -80px; font-size: 50px;">👨‍🌾</div>
+  </div>
+  <script src="{{ url_for('static', path='/js/smile.js') }}"></script>
+  {% if is_all_connect%}
+    <div class="main_card">
+      <div class="swen_balance">
+        <div style="font-size: 20px; margin-top: 20px;">$WEN BALANCE:</div>
+        <div style="font-size: 50px">77,373 👀</div>
+      </div>
+      <div>
+        <div class="tasks_labels" style="text-align: left; margin-left: 21%">Daily Tasks:</div>
+        <div class="tasks_labels">
+          <div>Do your favorite KOLs know $WEN drop ser?</div>
+          <div>Ask them!</div>
+        </div>
+        <div class="task_card">
+          <div style="margin-left: 10px;">+30</div>
+          <div>
+            <input style="margin-left: 50px;" type="text" placeholder="*PASTE YOUR LINK HERE*" class="links_input">
+          </div>
+          <div>
+            <button type="button" class="send_link_button">Send</button>
+            <div style="margin-left: 5px; font-size: 14px">3/10</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="tasks_labels" style="text-align: left; margin-left: 21%; margin-top: 15px">General Tasks:</div>
+        <div>
+          <div class="task_card">
+            <div style="margin-left: 10px;">+5000</div>
+            <div style="margin-left: 18%;">Follow @juliweb3</div>
+          </div>
+          <div class="task_card">
+            <div style="margin-left: 10px;">+5000</div>
+            <div style="margin-left: 18%;">Follow @eddefi</div>
+          </div>
+          <div class="task_card">
+            <div style="margin-left: 10px;">+5000</div>
+            <div style="margin-left: 13%;">Follow @WenDropSer</div>
+          </div>
+          <div class="task_card">
+            <div style="margin-left: 10px;">+5000</div>
+            <div style="margin-left: 18%;">Follow @zucl1ck</div>
+          </div>
+          <div class="task_card">
+            <div style="margin-left: 10px;">+300</div>
+            <div style="margin-left: 8%;">Add "$WEN 👀" to your X name</div>
+          </div>
+          <div class="task_card">
+            <div style="margin-left: 10px;">+1000</div>
+            <div style="margin-left: 18%;">Repost our tweet</div>
+          </div>
+          <div class="task_card">
+            <div style="margin-left: 10px;">+1000</div>
+            <div style="margin-left: 18%;">Repost our tweet</div>
+          </div>
+          <div class="task_card" style="margin-bottom: 30px;">
+            <div style="margin-left: 10px;">+1000</div>
+            <div style="margin-left: 18%;">Repost our tweet</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% else %}
+    <p class="average_lable">$WEN FARMING</p>
+    <div class="big_label">
+      <p>START FARM $WEN NOW</p>
+    </div>
+    <div class="main_card">
+      <p class="average_lable" style="font-size: 48px; margin-bottom: 0px">FIRST YOU NEED:<p>
+      <div>
+        {% if is_connect_wallet %}
+          <button type="button" class="button_card_main" style="margin-top: 20px; margin-bottom: 0px;">{{ wallet_adress }} ✅</button>
+        {% else %}
+          <button type="button" class="button_card_main" onclick="openConnectWalletWindow()" style="margin-top: 20px; margin-bottom: 0px;">Connect Wallet</button>
+        {% endif %}
+      </div>
+      <div>
+        {% if is_connect_x %}
+          <button type="button" class="button_card_main" style="margin-top: 10px; margin-bottom: 30px;">{{ x_adress }} ✅</button>
+        {% else %}
+          <button type="button" class="button_card_main" style="margin-top: 10px; margin-bottom: 30px;">Connect with X</button>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}

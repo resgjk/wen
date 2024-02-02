@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  db:
+    container_name: swen_db
+    image: postgres:15.5-alpine
+    environment:
+      POSTGRES_USER: swen_database
+      POSTGRES_PASSWORD: o3oO6JjzmiHBbN0UZs5M
+      POSTGRES_DB: swen
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    restart: always
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: plohihas06@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: Ph49qyY6cTYQ4TGGJ60j
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    restart: always
+
+
+volumes:
+  postgres:
+  pgadmin:

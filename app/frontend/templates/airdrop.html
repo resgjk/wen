@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block main %}
+  {% if is_airdrop_time == False %}
+    <div>
+      <div class="smiley" style="left: 10%; top: -100px; font-size: 55px;">⏰</div>
+      <div class="smiley" style="left: 25%; top: 180px; font-size: 40px;">⏰</div>
+      <div class="smiley" style="left: 40%; top: 100px; font-size: 45px;">⏰</div>
+      <div class="smiley" style="left: 60%; top: -40px; font-size: 55px;">⏰</div>
+      <div class="smiley" style="left: 75%; top: 200px; font-size: 60px;">⏰</div>
+      <div  class="smiley" style="left: 90%; top: -80px; font-size: 50px;">⏰</div>
+    </div>
+    <script src="{{ url_for('static', path='/js/smile.js') }}"></script>
+  {% endif %}
+  <p class="average_lable">$WEN AIRDROP</p>
+  <div class="big_label">
+    <p>CHECK YOUR ELIGIBILITY<br>FOR $WEN AIRDROP</p>
+  </div>
+  {% if wallet_is_correct %}
+    <div class="main_card">
+      <div class="average_lable" style="margin-top: 10px; margin-bottom: 0px;">Congratulations!</div>
+      <div class="average_lable" style="margin-top: 0px; margin-bottom: 0px;">Your Wallet is Eligible!</div>
+      {% if is_airdrop_time %}
+        <div>
+          <div class="smiley" style="left: 10%; top: -100px; font-size: 55px;">💸</div>
+          <div class="smiley" style="left: 25%; top: 180px; font-size: 40px;">💸</div>
+          <div class="smiley" style="left: 40%; top: 100px; font-size: 45px;">💸</div>
+          <div class="smiley" style="left: 60%; top: -40px; font-size: 55px;">💸</div>
+          <div class="smiley" style="left: 75%; top: 200px; font-size: 60px;">💸</div>
+          <div  class="smiley" style="left: 90%; top: -80px; font-size: 50px;">💸</div>
+        </div>
+        <script src="{{ url_for('static', path='/js/smile.js') }}"></script>
+        <div class="airdrop_statusbar"></div>
+        <div class="airdrop_size">Airdrop size: 795259783 $WEN</div>
+        <a href="claim"><button type="button" class="claim_button">CLAIM</button></a>
+      {% else %}
+        <p class="timer_label">Come Back In</p>
+        <div style="margin-bottom: 25px; display: flex; align-items: center; justify-content: center;">
+          <div id="days" class="time_element">&nbsp;
+          </div><span class="double_dot">&#58;</span>
+          <div id="hours" class="time_element">&nbsp;
+          </div><span class="double_dot">&#58;</span>
+          <div id="minutes" class="time_element">&nbsp;
+          </div><span class="double_dot">&#58;</span>
+          <div id="seconds" class="time_element">&nbsp;
+          </div>
+        </div>
+        <script src="{{ url_for('static', path='/js/timer.js') }}"></script>
+      {% endif %}
+    </div>
+  {% elif  wallet_is_correct == False %}
+    <div class="main_card">
+      <div class="average_lable" style="margin-top: 10px; margin-bottom: 0px;">Sorry!</div>
+      <div class="average_lable" style="margin-top: 0px; margin-bottom: 0px;">Your Wallet is Not Eligible!</div>
+      <div class="average_lable" style="margin-top: 10px; margin-bottom: 0px;">But You Can Still Get $WEN.!</div>
+      <div class="average_lable" style="margin-top: 0px; margin-bottom: 20px;"><a href="farm" class="farm_link">FARM</a> $WEN 👀</div>
+    </div>
+  {% else %}
+    <div class="main_card">
+      <button type="button" onclick="openConnectWalletWindow()" class="button_card_main">Connect Wallet</button>
+    </div>
+  {% endif %}
+{% endblock %}

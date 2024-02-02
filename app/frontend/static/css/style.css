@@ -1,0 +1,408 @@
+@font-face {
+    font-family: "FredokaOne Regular";
+    src: url("../fonts/FredokaOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: "RammettoOne Regular";
+    src: url("../fonts/RammettoOne-Regular.ttf");
+}
+
+header {
+    background-color: #2EBD85;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2EBD85;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav_image {
+    margin: 6px 6px 6px 20px;
+    border-radius: 50%;
+}
+
+.nav_link {
+    font-family: "FredokaOne Regular";
+    margin: 1%;
+    font-size: 25px;
+    color: white;
+}
+
+.nav_link:hover {
+    color: lightgray;
+}
+
+.nav_link_choise {
+    font-family: "FredokaOne Regular";
+    margin: 1%;
+    font-size: 25px;
+    color: white;
+    border-bottom: 3px solid white;
+    border-radius: 1px;
+}
+
+.nav_link_choise:hover {
+    color: lightgray;
+    border-color: lightgray;
+}
+
+.social_and_wallet_links {
+    margin-top: 15px;
+    margin-right: 20px;
+    display: flex;
+    float: right;
+}
+
+.connect_wallet_button_header {
+    height: 35px;
+    font-family: "FredokaOne Regular";
+    color: white;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 7px;
+    font-size: 18px;
+}
+
+.connect_wallet_button_header:hover {
+    color: lightgrey;
+    border-color: lightgray;
+}
+
+.social_links {
+    margin-top: 3px;
+    margin-right: 35px;
+}
+
+.footer_label {
+    display: flexS;
+    font-family: "FredokaOne Regular";
+    font-size: 20px;
+    color: white;
+    margin-left: 25px;
+    margin-top: 14px;
+}
+
+.footer_social_links {
+    float: right;
+    margin-right: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.average_lable {
+    font-family: "FredokaOne Regular";
+    font-size: 36px;
+    color: #2EBD85;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.big_label {
+    font-family: "RammettoOne Regular";
+    font-size: 40px;
+    color: #2EBD85;
+    text-align: center;
+}
+
+.main_card {
+    border: 4px solid #2EBD85;
+    border-radius: 60px;
+    margin-top: 45px;
+    margin-bottom: 250px;
+    margin-left: 300px;
+    margin-right: 300px;
+    text-align: center;
+    background-color: white;
+}
+
+.button_card_main {
+    height: 55px;
+    width: 370px;
+    font-family: "FredokaOne Regular";
+    color: #2EBD85;
+    background-color: transparent;
+    border: 3px solid #2EBD85;
+    border-radius: 15px;
+    padding: 3px;
+    font-size: 24px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.button_card_main:hover {
+    color: #207e5a;
+    border-color: #207e5a;
+}
+
+.airdrop_statusbar {
+    height: 35px;
+    border: 3px solid #2EBD85;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-right: 100px;
+    margin-left: 100px;
+    background-color: greenyellow;
+}
+
+.airdrop_size {
+    color: #2EBD85;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 300px;
+}
+
+.claim_button {
+    width: 400px;
+    background-color: #2EBD85;
+    font-family: "FredokaOne Regular";
+    font-size: 30px;
+    color: white;
+    border: 1px solid #2EBD85;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.claim_button:hover {
+    background-color: #207e5a;
+    border-color: #207e5a;
+    color: lightgrey;
+}
+
+.farm_link {
+    color: #2EBD85;
+    text-decoration: underline;
+}
+
+.farm_link:hover {
+    color: #207e5a;
+}
+
+.timer_label {
+    font-size: 18px;
+    font-family: "FredokaOne Regular";
+    color: #2EBD85;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.time_element {
+    width: 80px;
+    height: 80px;
+    border: 3px solid #2EBD85;
+    color: #2EBD85;
+    font-family: "FredokaOne Regular";
+    border-radius: 20px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.double_dot {
+    color: #2EBD85;
+    font-size: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.smiley {
+    z-index: -3;
+    position: absolute;
+    transform: translateX(-50%);
+    font-size: 50px;
+}
+
+.marquee1 {
+    display: flex;
+    z-index: -2;
+    position: absolute;
+    overflow: hidden;
+    margin-top: 480px;
+    left: -170px;
+    width: 116%;
+    border-top: 2px solid #2EBD85;
+    border-bottom: 2px solid #2EBD85;
+    background-color: transparent;
+    transform: rotate(-20deg);
+}
+
+.marquee2 {
+    display: flex;
+    z-index: -2;
+    position: absolute;
+    overflow: hidden;
+    margin-top: 400px;
+    left: -170px;
+    width: 114%;
+    border-top: 2px solid #2EBD85;
+    border-bottom: 2px solid #2EBD85;
+    background-color: transparent;
+    transform: rotate(13deg);
+}
+
+.marquee3 {
+    display: flex;
+    z-index: -2;
+    position: absolute;
+    overflow: hidden;
+    margin-top: 850px;
+    left: -170px;
+    width: 113%;
+    border-top: 2px solid #2EBD85;
+    border-bottom: 2px solid #2EBD85;
+    background-color: transparent;
+    transform: rotate(-10deg);
+}
+
+.run_row_element {
+    flex: 1;
+    width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    z-index: -1;
+    background-color: transparent;
+    color: #2EBD85;
+    font-family: "FredokaOne Regular";
+    animation: run_row 6s linear infinite;
+}
+
+@keyframes run_row {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%)
+    }
+}
+
+.swen_balance {
+    color: black;
+    font-family: "RammettoOne Regular";
+    text-align: center;
+}
+
+.tasks_labels {
+    font-size: 18px;
+    color: #2EBD85;
+    font-family: "FredokaOne Regular";
+}
+
+.task_card {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border: 3px solid #2EBD85;
+    border-radius: 15px;
+    font-family: "FredokaOne Regular";
+    height: 70px;
+    color: #2EBD85;
+    margin-left: 175px;
+    margin-right: 175px;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.links_input {
+    color: #2EBD85;
+    border: 1px solid white;
+    background-color: white;
+    outline: none;
+}
+
+.send_link_button {
+    font-family: "FredokaOne Regular";
+    color: #2EBD85;
+    background-color: white;
+    border: 2px solid #2EBD85;
+    border-radius: 7px;
+    font-size: 17px;
+    margin-left: 5px;
+    margin-top: 10px;
+    width: 75px;
+}
+
+.send_link_button:hover {
+    color: #207e5a;
+    border: 2px solid #207e5a;
+}
+
+#connectWalletWindow {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: white;
+    background-color: white;
+    border: 1px solid white;
+    width: 650px;
+    height: 300px;
+    margin: 15% auto;
+    padding: 20px;
+}
+
+.closeConnectWalletWindowBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 40px;
+    margin-right: 5px;
+    font-family: "FredokaOne Regular";
+    color: #2EBD85;
+    background-color: transparent;
+    border: 0px;
+    width: 50px;
+
+}
+
+.closeConnectWalletWindowBtn:hover {
+    color: #207e5a;
+}
+
+.wallet_address_input {
+    border: 3px solid #2EBD85;
+    border-radius: 7px;
+    color: #2EBD85;
+    font-family: "FredokaOne Regular";
+    outline: none;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 25px;
+    height: 45px;
+    padding: 3px;
+}
+
+.connect_wallet_form_button {
+    margin-top: 45px;
+    margin-left: 140px;
+    margin-right: 140px;
+    color: white;
+    background-color: #2EBD85;
+    font-size: 25px;
+    border: 1px solid #2EBD85;
+    border-radius: 10px;
+    font-family: "FredokaOne Regular";
+    height: 45px;
+}
+
+.connect_wallet_form_button:hover {
+    color: lightgrey;
+    background-color: #207e5a;
+    border-color: #207e5a;
+}
